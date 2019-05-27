@@ -12,6 +12,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { GetImageUrlPipe } from './common/pipes/get-image-url.pipe';
 import { LoginFormComponent } from './public/login/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
+import { AuthHomeComponent } from './auth/auth-home/auth-home.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     VehiclesComponent,
     GetImageUrlPipe,
-    LoginFormComponent
+    LoginFormComponent,
+    AuthHomeComponent
   ],
   imports: [
     BrowserModule,
