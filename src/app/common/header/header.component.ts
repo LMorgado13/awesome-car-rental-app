@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  isModalActive = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleModal(){
+    console.log('click');
+   this.isModalActive = !this.isModalActive;
+
   }
 
 }

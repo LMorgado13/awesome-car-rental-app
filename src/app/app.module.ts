@@ -9,6 +9,9 @@ import { HomeComponent } from './public/home/home.component';
 import { VehiclesComponent } from './public/vehicles/vehicles.component';
 import { VehiclesService } from './public/vehicles/services/vehicles.service';
 import {  HttpClientModule } from '@angular/common/http';
+import { GetImageUrlPipe } from './common/pipes/get-image-url.pipe';
+import { LoginFormComponent } from './public/login/login-form/login-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,10 +20,13 @@ import {  HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    GetImageUrlPipe,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],
