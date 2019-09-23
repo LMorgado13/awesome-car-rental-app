@@ -3,19 +3,25 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './public/home/home.component';
 import { CommonModule } from '@angular/common';
 import { AuthHomeComponent } from './auth/auth-home/auth-home.component';
+import { AuthGuard } from './common/guards/auth.guard';
+import { PublicGuard } from './common/guards/public.guard';
 
 const routes: Routes = [{
   path: '',pathMatch: 'full', redirectTo: '/home'
 },{
   path: 'home',
   component:HomeComponent,
-  pathMatch: 'full'
+  pathMatch: 'full',
+  canActivate: [PublicGuard] 
 },
 {
   path: 'auth-home',
-  component:AuthHomeComponent
-  
-}
+  component:AuthHomeComponent,
+  canActivate: [AuthGuard]
+},
+//{
+//  path: 'Vehicles/id',component:VehicleDetailsComponent
+//}
 ];
 
 @NgModule({
